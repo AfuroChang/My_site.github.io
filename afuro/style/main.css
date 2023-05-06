@@ -1,0 +1,317 @@
+:root {
+  --container-size: 100%;
+  --primary-color: #010121;
+  --primary-light-color: #0c194d;
+  --secondary-color: #ffbb2a;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-size: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --container-size: 1024px;
+  }
+}
+
+
+
+
+/* NAV */
+nav{
+  margin: 0px;
+  padding: 0px;
+  display: inline-block;
+  width:100%;
+  text-align:center;
+  font-size: 1rem
+  position: fixed;
+ 
+}
+nav li{
+  display: inline-block;
+}
+nav li a{
+  display:inline-block;
+  padding:20px;
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+}
+nav li a:hover{
+  color: #6B7CFF;
+}
+
+@keyframes loading {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.navbar-fixed-top{
+    position: sticky;  
+    top: 0px;
+    left: auto; 
+    z-index: 999; 
+}
+
+
+
+
+
+html,
+body {
+  background-color: var(--primary-color);
+  font-size: 1rem;
+  margin: 0;
+  color: white;
+  
+}
+
+img {
+  max-width: 100%;
+  animation: loading .5s 0.6s 1 both ease-in-out;
+}
+
+.container {
+  max-width: var(--container-size);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  animation: loading .5s 0.3s 1 both ease-in-out;
+}
+
+h2 {
+  animation: loading .5s 0.3s 1 both ease-in-out;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+
+
+.section-title {
+  text-align: center;
+}
+
+.about-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-hero img {
+  width: 400px;
+}
+
+.experience-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-bottom: 5rem;
+}
+
+.experience-logo {
+  grid-column: span 3 / span 3;
+}
+
+.experience-logo img {
+  width: 100%;
+}
+
+.experience-description {
+  grid-column: span 9 / span 9;
+}
+
+.experience-description .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description .subtitle {
+  margin-bottom: 0.5rem;
+}
+
+.specialize-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.specialize-wrapper h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.case-title {
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+.case-hero img {
+  width: 100%;
+}
+
+.es2move-section {
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.es2move-section > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.es2move-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.es2move-info a {
+  color: #3397f7;
+}
+
+.es2move-info .logo {
+  width: 24.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.es2move-image {
+  width: 100%;
+}
+
+.case-overview-wrapper,
+.case-research-wrapper,
+.case-price-wrapper {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.case-research-wrapper:nth-of-type(1) {
+  margin-bottom: 6.25rem;
+}
+
+.case-overview-title {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.case-description {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.case-research-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.case-price-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #31d272;
+}
+
+/* home */
+.works-title{
+   text-align: center
+}
+
+.home-img > #home-img-topbtn{
+  z-index: 10;
+}
+
+.home-img:hover{
+  transform: scale(1.06);
+  box-shadow: 0px 5px 40px -5px rgba(0, 0, 0, 0.11);
+
+}
+
+
+
+/* @media min-width */
+
+
+@media (min-width: 1024px) {
+  html,
+  body {
+    font-size: 1.125rem;
+  }
+
+  section {
+    margin-bottom: 6.25rem;
+  }
+
+  .about-hero {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about-hero img {
+    width: 100%;
+    margin: 5rem;
+  }
+
+  .es2move-section {
+    height: 100vh;
+  }
+
+  .es2move-section > div {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-overview-wrapper,
+  .case-research-wrapper,
+  .case-price-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+
+/* footer */
+
+.footer{
+  animation: loading 1s 0.6s 1 both ease-in-out;
+  background-color: #0D194D;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  font: 1.25rem;
+  padding: 60px ;
+  overflow: hidden;
+  color: white;
+  margin: 0px;
+
+}
+/* .footer > .footer-left{
+  float: left;
+  text-align: center;
+} */
+.footer-Copyrights{
+  color: #B4B1DA;
+  font-size: .85rem;
+}
+
+/* .footer > .footer-right{
+  float: right;
+}
+ */
